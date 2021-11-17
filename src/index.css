@@ -1,0 +1,791 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #44103b;
+}
+.bg{
+    position: relative;
+    min-height: 100vh;
+    padding : 50px 0;
+}
+#home-nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+#home-nav img{
+    max-width: 60px;
+}
+.home-desc{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.tt-logo{
+    text-align: center;
+}
+.tt-logo img{
+    margin-top: -40px;
+    width: 304px;
+    aspect-ratio: auto 304 / 236;
+    height: 236px;
+}
+
+/*Home*/
+.game-btn{
+    background: #7d2741;
+    color: #fff;
+    text-transform: capitalize;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+.game-btn:hover{
+    background-color: transparent;
+    color: #e1aa18;
+    border: 2px solid #e1aa18;
+}
+.home .game-theme .themes{
+    text-align: center;
+}
+.home .theme-btn{
+    background: #7d2741;
+    color: #fff;
+    font-weight: 600;
+    padding: 9px 22px;
+    font-size: 22px;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    border: none;
+    cursor: pointer;
+    margin: 0 20px;
+}
+.home .theme-btn:hover{
+    background-color: transparent;
+    color: yellow;
+    border: 2px solid yellow;
+}
+.home .teamcountbtn{
+    cursor: pointer;
+    user-select: none;
+}
+.home .bg-brown{
+    background: #290118 !important;
+}
+
+.home .teams{
+    overflow-y: hidden;
+    height: 0px;
+}
+
+/*Join*/
+
+.join{
+    text-align: center;
+    color: white;
+}
+.join .join-form{
+    margin-top: 40px;
+    color: white;
+    font-size: 30px;
+    font-size: 30px;
+}
+.join .join-form div{
+    margin: 10px 0;
+}
+.join .join-form div label {
+    margin: 0 40px;
+}
+.join .join-form div input{
+    font-size: 18px;
+    padding: 7px 10px;
+    width: 200px;
+    border: none;
+    outline: none;
+    border-radius: .3em;
+}
+/* Chrome, Safari, Edge, Opera */
+.join input::-webkit-outer-spin-button,
+.join input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.join input[type=number] {
+  -moz-appearance: textfield;
+}
+.join .join-form button{
+    padding: 10px 30px; 
+    font-size: 20px;
+    text-transform: uppercase;
+    color: black;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    margin-top: 30px;
+}
+
+.join #error{
+    color: rgb(255, 145, 0);
+}
+
+
+/*Lobby*/
+
+.lobby .game-code{
+    text-align: center;
+    color: #290118;
+}
+.lobby .game-code span:hover{
+    cursor: pointer;
+}
+.lobby .player-div{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 100px;
+}
+.lobby .player{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lobby .player .icon{
+    background-color: #290118;
+    color: white;
+    text-transform: uppercase;
+    width: 1.8em;
+    height: 1.8em;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(.5em);
+    box-shadow: 0 0 7px #222;
+}   
+.lobby .player .name{
+    text-transform: uppercase;
+}
+.lobby .ptext{
+    color: #290118;
+    text-align: center;
+}
+
+
+/*Select Oracle*/
+
+
+.selectOracle #select{
+    margin: 20px auto;
+    font-size: 30px;
+    width: fit-content;
+}
+.selectOracle #select input{
+    width: 20px;
+    height: 20px;
+    margin-left: 20px;
+}
+.selectOracle #select span{
+    margin-right: 20px;
+}
+.selectOracle button{
+    display: block;
+    margin: 20px auto ;
+    padding: 10px 30px;
+    background-color: #e1aa18;
+    color: black;
+    cursor: pointer;
+    font-size: 18px;
+}
+.selectOracle #radioOracle{
+    width: fit-content;
+    display: inline-block;
+}
+
+/*Player Lobby*/
+
+.playerLobby{
+    color: white;
+    text-align: center;
+}
+.playerLobby .player-name{
+    font-size: 1.9em;
+    margin: 20px;
+}
+.playerLobby h2{
+    font-size: 2em;
+}
+.playerLobby h1{
+    margin: 30px;
+    font-size: 3em;
+    font-weight: 100;
+}
+
+/*Host Game*/
+.hostGame{
+    text-align: center;
+    color: white;
+}
+.hostGame .round-info{
+    font-size: 30px;
+    font-weight: 600;
+    margin-top: 30px;
+}
+.hostGame .round-info p{
+    font-size: 15px; margin: 10px 0;
+}
+.hostGame .round-info button{
+    margin: 0 10px;
+    padding: 7px 20px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+}
+.phrases{
+    margin: 15px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 480px;
+    flex-wrap: wrap;
+}
+.hostGame .phrases{
+    margin: 15px 0;
+}
+.word{
+    border: 2px solid #e1aa18;
+    border-radius: .3em;
+    width: 150px;
+    height: 100px;
+    margin: .1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    position: relative;
+}
+.num{
+    position: absolute;
+    top: 0px;
+    left: 8px;
+    color: #e1aa18;
+}
+.oracle-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    background-color: rgba(0, 0, 0, 0.6);
+    max-width: fit-content;
+    margin: auto;
+}
+.oracle-info div{
+    margin:  0 20px;
+}
+.oracle-info div span{
+   color: tomato;
+   text-decoration: underline;
+   text-decoration-style: dotted;
+}
+
+.hostGame .game-display{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.hostGame .awaited{
+    width: 200px;
+    height: 200px;
+    max-height: 300px;
+    border-radius: 50%;
+    background-color: rgba(179, 179, 179, 0.6);
+    color: white;
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.hostGame .awaited h1{
+    font-size: 3.5em;
+}
+.hostGame .awaited ul{
+    display: none;
+    width: 300px;
+    height: fit-content;
+    max-height: 800px;
+    position: absolute;
+    margin-top: 20px;
+    font-size: 20px;
+    overflow-y: scroll;
+    background-color: white;
+    color: black;
+    padding: 0 30px;
+    border-radius: 20px;
+}
+.hostGame .awaited ul li{
+    display: block;
+    margin: 7px 0;
+    font-size: 26px;
+    padding: 5px 0;
+    border-bottom: 1px solid black;
+}
+.hostGame .awaited ul li:last-child{
+    border-bottom: none;
+}
+.hostGame .awaited:hover ul{
+    display: block;
+}
+
+.hostGame .awaited ::-webkit-scrollbar {
+    width: 0px;
+    display: none;
+  }
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(0, 255, 149); 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #b30000; 
+  }
+#timer{
+      background-color: rgb(246, 255, 215);
+      color: black;
+      padding: 5px 0;
+      font-size: 24px;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+  }
+#timer #sec{
+      color: rgb(192, 0, 0);
+      font-weight: 600;
+  }
+.hostGame .btn-outline-warning{
+    background-color: #7d2741;
+    color: aliceblue;
+    border: 1px solid transparent;
+}
+.hostGame .btn{
+    margin: 0 20px;
+}
+
+ /*Player Game*/
+.game{
+    color: white;
+    text-align: center;
+    margin-top: -30px;
+}
+.greeting{
+    font-size: 2em;
+}
+.greeting span{
+    color: yellow;
+}
+.playerGame .clues h4 span{
+    color: rgb(255, 109, 11);
+    margin: 0 10px;
+}
+.playerGame .code{
+    margin-top: 5px;
+}
+.playerGame .code h4{
+    display: inline-block;
+    margin-right: 10px;
+}
+.playerGame .code .input{
+    margin: 10px 0;
+    font-size: 30px;
+    text-align: center;
+    color: white;
+    border-bottom: 3px solid tomato;
+    letter-spacing: 10px;
+    margin-left: 10px;
+}
+.playerGame .code button{
+    margin: 0px auto;
+    display: block;
+    font-size: 20px;
+    padding: 10px 30px;
+    color: black;
+    background-color: yellow;
+}
+
+/* Firefox */
+.playerGame input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.playerGame .toggle{
+    display: none;
+    width: 250px;
+    text-align: center;
+    font-size: 16px;
+    position: absolute;
+    right: 10px;
+    top: 80px;
+    line-height: 0.9rem;
+}
+.playerGame .switch {
+    position: relative;
+    display: inline-block;
+    width: 55px;
+    height: 27px;
+  }
+  
+  /* Hide default HTML checkbox */
+ .playerGame  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+ .playerGame  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+ .playerGame  .slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+ .playerGame  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+ .playerGame  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+ .playerGame  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+ .playerGame  .slider.round {
+    border-radius: 34px;
+  }
+  
+ .playerGame  .slider.round:before {
+    border-radius: 50%;
+  }
+
+ .playerGame  .selected{
+    background-color: rgb(38, 10, 82);
+  }
+ .playerGame  .sendCode{
+    background-color: gray !important;
+    cursor: not-allowed !important;
+  }
+ .playerGame  #error{
+    color: red;
+    font-size: 20px;
+    margin: 10px 0;
+  }
+
+
+
+  /*Oracle Game*/
+
+.oracleGame .codes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.oracleGame .codes h3{
+    margin: 0px 30px;
+}
+.oracleGame .codes h3:first-child{
+    color: rgb(53, 255, 53);
+}
+.oracleGame .codes h3:last-child{
+    color: rgb(255, 81, 81)
+}
+.oracleGame .treasure{
+    background-color: rgb(6, 104, 55);
+}
+.oracleGame .trap{
+    background-color: rgb(207, 33, 33);
+}
+.oracleGame .clues h1{
+    margin-bottom: 20px;
+}
+.oracleGame .clues input{
+    margin: 5px 20px ;
+    font-size: 18px;
+    width: 200px;
+    text-align: center;
+    border-radius: .3em;
+    border: none;
+    outline: none;
+    padding: 5px;
+}
+.oracleGame .clues p{
+    max-width: 600px;
+    font-size: 1.2em;
+    margin: 5px auto;
+    margin-bottom: 15px;
+}
+
+
+/*Results*/
+
+.result{
+    text-align: center;
+    color: white;
+}
+.result .game-info{
+    margin-top: 10px;
+}
+.result .round{
+    margin-top: 15px;
+    font-size: 30px;
+    color: yellow;
+    font-weight: 600;
+}
+.result .board{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.result .scores{
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+.result .scores h2{
+    color: yellow;
+    margin: 20px 0;
+}
+.result .explorers{
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.result #cloud div{
+    width: 100%;
+    height: 450px;
+}
+.result .oracle{
+    font-size: 30px;
+    margin: 10px ;
+}
+.result .orName span{
+    color: #baff8c;
+}
+.result .orClues span{
+    color: tomato;
+    margin: 0 10px;
+}
+.result .word-answer{
+    width: 100%;
+    max-width: 700px;
+}
+.result .treasure{
+    background-color: rgb(6, 104, 55);
+}
+.result .trap{
+    background-color: rgb(207, 33, 33);
+}
+.result .score{
+    font-size: 20px;
+    background-color: yellow;
+    color: black;
+    border: 1px solid violet;
+    border-radius: 10px;
+    padding: 10px 30px;
+    width: fit-content;
+    margin: auto;
+    height: fit-content;
+    cursor: pointer;
+}
+.result .ownResult{
+    color: rgb(229, 255, 0) !important;
+}
+
+/*Scores*/
+
+.score{
+    text-align: center;
+    color: white;
+}
+.score .oracle, .explorer{
+    margin: 40px 0;
+}
+.score h2{
+    margin: 5px auto;
+    display: flex;
+    justify-content: center;
+    color: yellow;
+}
+.score hr{
+    background-color: yellow;
+}
+.score h2 .name{
+    text-align: right;
+    margin-right: 100px;
+    width: 50%;
+}
+.score h2 .score{
+    text-align: left;
+    width: 50%;
+    margin-left: 100px;
+}
+.score h2 span{
+    margin: 0 50px;
+}
+.score input{
+    margin: 10px 10px 10px 40px;
+}
+
+.score button{
+    cursor: pointer;
+    font-size: 18px;
+    padding: 10px 30px;
+    margin: 50px 30px;
+    color: rgb(44, 0, 165);
+    background-color: yellow;
+    font-weight: 600;
+    border-radius: 15px;
+    transition: all 0.5s;
+}
+.score .btn button:hover {
+    background-color: rgb(44, 0, 165);
+    color: yellow;
+
+}
+.score h1{
+    margin-bottom: 20px;
+}
+.score .btn-score-info{
+    color: black;
+    background-color: white;
+    margin: 10px 30px;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 3px 10px;
+
+}
+.score .slt{
+    color: white;
+    background-color: black;
+}
+
+/*Teams*/
+
+
+.teamsComp .head{
+    background-color: #290118;
+    color: #fff;
+}
+.teamsComp .player{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.teamsComp .player .icon{
+    background-color: #290118;
+    color: white;
+    text-transform: uppercase;
+    width: 1.8em;
+    height: 1.8em;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(.5em);
+    box-shadow: 0 0 7px #222;
+}   
+.teamsComp .player .name{
+    text-transform: uppercase;
+}
+.teamsComp .ptext{
+    color: #290118;
+    text-align: center;
+}
+
+/*Team Game*/
+
+.teamGame{
+    text-align: center;
+    color: white;
+}
+.teamGame .chatbox .head{
+    background-color: #290118;
+    color: white;
+}
+.teamGame .chatbox{
+    overflow: hidden;
+    display: none;
+    animation: growin .15s forwards;
+}
+@keyframes growin {
+    from{
+        transform: scale(.8);
+        opacity: 0;
+    }
+    to{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+.teamGame .chat{
+    height: 18em;
+}
+.teamGame .head{
+    position: relative;
+}
+.teamGame .close_chat{
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+}
+.teamGame .input{
+    border: none;
+    outline: none;
+    background: transparent;
+}
+.teamGame .send{
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+}
