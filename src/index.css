@@ -198,10 +198,6 @@ body{
 .selectOracle button{
     display: block;
     margin: 20px auto ;
-    padding: 10px 30px;
-    background-color: #e1aa18;
-    color: black;
-    cursor: pointer;
     font-size: 18px;
 }
 .selectOracle #radioOracle{
@@ -271,6 +267,7 @@ body{
     align-items: center;
     font-size: 1.5em;
     position: relative;
+    cursor: pointer;
 }
 .num{
     position: absolute;
@@ -419,9 +416,7 @@ body{
     margin: 0px auto;
     display: block;
     font-size: 20px;
-    padding: 10px 30px;
     color: black;
-    background-color: yellow;
 }
 
 /* Firefox */
@@ -579,8 +574,6 @@ body{
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    margin-top: 20px;
-    margin-bottom: 30px;
 }
 .result .scores{
     width: 100%;
@@ -590,18 +583,25 @@ body{
 }
 .result .scores h2{
     color: yellow;
-    margin: 20px 0;
 }
 .result .explorers{
     width: 100%;
-    max-width: 450px;
     display: flex;
     flex-wrap: wrap;
 
 }
 .result #cloud div{
     width: 100%;
-    height: 450px;
+    height: 400px;
+}
+.result #cloud div #players{
+    position: absolute;
+    top: 0;
+    font-size: 32px;
+    color: black;
+    background-color: white;
+    padding: 2px 30px;
+    border-radius: 10px;
 }
 .result .oracle{
     font-size: 30px;
@@ -635,6 +635,9 @@ body{
     margin: auto;
     height: fit-content;
     cursor: pointer;
+}
+.score .list h2{
+    color: #290118 !important;
 }
 .result .ownResult{
     color: rgb(229, 255, 0) !important;
@@ -676,27 +679,16 @@ body{
 }
 
 .score button{
-    cursor: pointer;
     font-size: 18px;
-    padding: 10px 30px;
-    margin: 50px 30px;
-    color: rgb(44, 0, 165);
-    background-color: yellow;
-    font-weight: 600;
-    border-radius: 15px;
     transition: all 0.5s;
 }
-.score .btn button:hover {
-    background-color: rgb(44, 0, 165);
-    color: yellow;
 
-}
 .score h1{
     margin-bottom: 20px;
 }
 .score .btn-score-info{
-    color: black;
-    background-color: white;
+    color: white;
+    background-color: black;
     margin: 10px 30px;
     border-radius: 5px;
     font-size: 16px;
@@ -788,4 +780,7 @@ body{
     display: grid;
     place-content: center;
     cursor: pointer;
+}
+#pl{
+    position: absolute;
 }

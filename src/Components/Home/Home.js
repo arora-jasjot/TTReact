@@ -76,7 +76,8 @@ function Home({moveGame}) {
             game : "host",
             mode : mode,
             time : time,
-            round : 1
+            round : 1,
+            players : []
         }
         if(mode === "team"){
            gameOptions.select = team;

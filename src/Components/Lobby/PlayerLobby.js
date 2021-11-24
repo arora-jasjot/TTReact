@@ -13,16 +13,20 @@ function PlayerLobby({socket}) {
   useEffect(() => {
     let gameOptions = JSON.parse(window.sessionStorage.getItem("tt-game"));
     setName(gameOptions.name);
+    return () => setName("");
+  }, []);
+
+  useEffect(() => {
     socket.on("oracle", (neworacle) => {
       setOracle(neworacle);
-      if(neworacle === gameOptions.name){
+      if(neworacle === name){
         setMsg("Congratulations, You are selected as Oracle.")
       }
       else{
         setMsg("Joined Successfully")
       }
     })
-  }, [socket]);
+  }, [socket, name]);
 
   return (
     <div className="bg playerLobby">

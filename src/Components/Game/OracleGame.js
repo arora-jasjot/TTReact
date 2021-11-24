@@ -2,31 +2,46 @@ import React, { useEffect, useState } from "react";
 import navImg from '../../Media/mascotBrandLogo.png'
 import headImg from '../../Media/tt1.svg'
 
-function OracleGame({socket, time, setTime}) {
+function OracleGame({socket}) {
 
+    const [time, setTime] = useState("");
     const [clue1, setClue1] = useState("");
     const [clue2, setClue2] = useState("");
     const [readOnly, setReadOnly] = useState(false);
     const [words, setWords] = useState(null);
+    const [gameData, setData] = useState(null);
+
 
     useEffect(() => {
-        if(time === ""){
-            let gameOptions = JSON.parse(window.sessionStorage.getItem("tt-game"));
-            setTime(gameOptions.time * 60);
+        let gameOptions = JSON.parse(window.sessionStorage.getItem("tt-game"));
+        setData(gameOptions);
+        return () => setData(null);
+    }, []);
+
+    useEffect(() => {
+        if (gameData !== null) {
+            let newDate = new Date();
+            newDate = newDate.getTime();
+            let endDate = gameData.targetTimer;
+            let seconds = (endDate - newDate) / 1000;
+            seconds = Math.floor(seconds);
+            setTime(seconds);
         }
-        else{
-            if (time > 0) {
-                setTimeout(() => setTime(time - 1), 1000);
-            }
+    }, [gameData]);
+    useEffect(() => {
+        if (time > 0) {
+            setTimeout(() => setTime(time - 1), 1000);
         }
-    }, [time, setTime, socket]);
+    }, [time]);
     
     useEffect(() => {
-        socket.emit("newWord");
+        if(words===null){
+            socket.emit("newWord");
+        }
         socket.on("newWord", (oracleWords) => {
             setWords(oracleWords);
         });
-    }, [socket])
+    }, [socket, words])
 
 
     const sendClues = () => {
@@ -42,6 +57,8 @@ function OracleGame({socket, time, setTime}) {
             }
             socket.emit("clues", (data));
             setReadOnly(true);
+            document.getElementById('send_btn').classList.add('disabled','btn-secondary')
+            document.getElementById('send_btn').classList.remove('btn-warning')
         }
     }
 
@@ -71,7 +88,7 @@ function OracleGame({socket, time, setTime}) {
                 <input id="clue1" value={clue1} onChange={ (e) => setClue1(e.target.value) } readOnly={readOnly} />
                 <input id="clue2" value={clue2} onChange={ (e) => setClue2(e.target.value) } readOnly={readOnly} />
                 <p>Only one word per box. No special characters allowed</p>
-                <button className="btn btn-lg btn-warning px-4" onClick={ () => sendClues()}>Send</button>
+                <button className="btn btn-lg btn-warning px-4" id='send_btn' onClick={ () => sendClues()}>Send</button>
             </div>
         <div id="timer"><span id="sec">{time}</span> seconds left.</div>
         </div>

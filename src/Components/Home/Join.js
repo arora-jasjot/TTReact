@@ -60,12 +60,12 @@ function Join({socket, moveGame}) {
         <h1>Ready to Play?</h1>
         <div className="join-form container">
             <div>
-                <label htmlFor="code">Game Code</label>
-                <input type="text" id="code" name="code" autoComplete="off" onChange={(e) => updateCode(e.target.value)} value={inCode} />
+                <label htmlFor="code" className='d-none'>Game Code</label>
+                <input type="text" id="code" name="code" className='text-center' placeholder='Game Code' autoComplete="off" onChange={(e) => updateCode(e.target.value)} value={inCode} />
             </div>
             <div>
-                <label htmlFor="name">Nick Name</label>
-                <input type="text" id="name" name="name" autoComplete="off" onChange={(e) => updateName(e.target.value)} value={inName} />
+                <label htmlFor="name" className='d-none'>Nick Name</label>
+                <input type="text" id="name" name="name" className='text-center' autoComplete="off" placeholder='Nick Name' onChange={(e) => updateName(e.target.value)} value={inName} />
             </div>
             <p id="error">{error}</p>
             <button className="btn btn-lg btn-info" onClick={() => joinGame()}>Join</button>
